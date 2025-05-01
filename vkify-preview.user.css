@@ -1,0 +1,251 @@
+/* ==UserStyle==
+@name           VKify 03.05.25 Preview
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    vkify update preview
+@author         koke228
+==/UserStyle== */
+
+@-moz-document domain("ovk.to") {
+body[data-themepack="vkify"] .notification_ballon notification_title .close {
+  width: 10px;
+  height: 16px;
+  float: right;
+  overflow: auto;
+  opacity: 0.1;
+  color: #fff;
+  transition-duration: 0.3s;
+}
+body[data-themepack="vkify"] .notification_ballon notification_title .close {
+  display: block;
+  background: url("data:image/gif;base64,R0lGODlhBwAHAIABAP///////yH5BAEAAAEALAAAAAAHAAcAAAIMBIKmsWrIXnLxuDMLADs=") no-repeat scroll 0 0 transparent;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  width: 7px;
+  height: 7px;
+}
+body[data-themepack="vkify"] .notification_ballon:hover notification_title .notif_close_bg {
+  display: block;
+}
+
+body[data-themepack="vkify"] .notification_ballon {
+  animation-duration: 0.5s !important;
+      transition: all 0.4s ease;
+}
+
+body[data-themepack="vkify"] .notif_close_bg {
+  /*width: 16px;*/
+  float: right;
+  background: #000;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 0 0 2px #111;
+  -webkit-box-shadow: 0 0 2px #111;
+  box-shadow: 0 0 2px #111;
+  padding: 5px;
+  display: none;
+  opacity: 0.6;
+}
+body[data-themepack="vkify"] .notif_close_bg:hover {
+  opacity: 1;
+}
+body[data-themepack="vkify"] .notification_ballon wrap avatar {
+  width: 50px;
+  padding-right: 10px;
+  overflow: hidden;
+  width: 50px;
+  max-height: 50px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  line-height: 0;
+}
+body[data-themepack="vkify"] .notification_ballon wrap avatar img {
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+  overflow: hidden;
+  width: 50px;
+  max-height: 50px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 0 1px 2px #111;
+  -webkit-box-shadow: 0 1px 2px #111;
+  box-shadow: 0 1px 2px #111;
+  line-height: 0;
+}
+body[data-themepack="vkify"] .notification_ballon notification_title {
+  font-size: 10pt;
+  font-weight: bold;
+  display: block;
+  padding: 9px 10px 8px;
+  margin: unset;
+}
+body[data-themepack="vkify"] .notification_ballon {
+  width: 320px;
+  height: 80px;
+  color: white !important;
+  display: inline-block;
+  animation-name: notification_ballon_appears;
+  animation-duration: 0.5s;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.75);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 2px 15px #000;
+  -webkit-box-shadow: 0 2px 15px #000;
+  box-shadow: 0 2px 15px #000;
+  text-shadow: 0px 1px 0px #262626;
+  padding: 0px 0px 15px 0px;
+}
+body[data-themepack="vkify"] .notifications_global_wrap {
+  bottom: 0;
+  position: fixed;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: visible;
+  z-index: 1000;
+  width: 360px;
+  height: 0px;
+}
+body[data-themepack="vkify"] .notification_ballon notification_title .close:hover {
+  opacity: 1;
+}
+body[data-themepack="vkify"] .notif_close_bg:hover .close {
+  opacity: 1;
+}
+body[data-themepack="vkify"] .notification_ballon.disappears {
+    animation-name: notification_ballon_disappears;
+    animation-duration: 0.5s;
+}
+@keyframes notification_ballon_appears {
+    0% {
+        transform: translateY(130px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes notification_ballon_disappears {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+body[data-themepack="vkify"] .sidebar .navigation a[href="/im"] .im_pad {
+  display: none;
+  transition: background-color 200ms linear, color 200ms linear;
+  font-weight: normal;
+}
+body[data-themepack="vkify"] .sidebar .navigation a[href="/im"]:hover .im_pad {
+  display: block;
+  padding: 4px !important;
+}
+body[data-themepack="vkify"] .sidebar .navigation a[href="/im"]:hover:not(a[href="/im"].pad_shown:hover) .im_pad:hover {
+  display: block;
+  padding: 4px !important;
+  background-color: #BBC7D3;
+  color: #6887A8;
+}
+body[data-themepack="vkify"] .sidebar .navigation a.pad_shown[href="/im"] .im_pad {
+  display: block;
+  padding: 4px !important;
+  background-color: #6887A8;
+  color: #FFF;
+}
+body[data-themepack="vkify"] .sidebar .navigation a[href="/im"].pad_shown object:not(.im_pad) {
+  display: none;
+}
+body[data-themepack="vkify"] .sidebar .navigation a[href="/im"]:hover object:not(.im_pad) {
+  display: none;
+}
+body[data-themepack="vkify"] .im_pad_head {
+  background-color: #5a7da3;
+  color: #FFF;
+  margin: -6px -10px 0px -10px;
+  border: 1px;
+  font-weight: bold;
+  padding: 9px;
+}
+body[data-themepack="vkify"] .im_pad_footer {
+  margin: 0px -9px -5px -9px;
+  background-color: #f2f2f2;
+  border-top: 1px solid #dae1e8;
+  width: 453px;
+  height: 30px;
+  padding: 6px 7px 3px;
+}
+body[data-themepack="vkify"] .im_pad_footer .button {float: right;}
+body[data-themepack="vkify"] .im_pad_cont {
+  font-size: 12px;
+  max-width: 449px;
+  min-height: 250px;
+}
+body[data-themepack="vkify"] .im_pad_cont .message_block {
+  padding: 9px 1px;
+}
+body[data-themepack="vkify"] .im_sm_ava {max-width: 51px;}
+body[data-themepack="vkify"] .im_infoblock {
+  float: right;
+  width: 386px;
+  font-size: 11px;
+}
+body[data-themepack="vkify"] .im_pad_cont .pad_loading {
+  background:
+#FFF url("data:image/gif;base64,R0lGODlhIAAIAKECAEVojoSctMHN2QAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFCgADACwAAAAAIAAIAAACFZyPqcvtD6KMr445LcRUN9554kiSBQAh+QQFCgADACwCAAIAEgAEAAACD4xvM8DNiJRz8Mj5ari4AAAh+QQFCgADACwCAAIAHAAEAAACGJRvM8HNCqKMCCnn4JT1XPwMG9cJH6iNBQAh+QQFCgADACwMAAIAEgAEAAACD5RvM8HNiJRz8Mj5qri4AAAh+QQFCgADACwWAAIACAAEAAACBZSPqYsFACH5BAUUAAMALAAAAAAgAAgAAAIOnI+py+0Po5y02ouzPgUAOw==") no-repeat center center;
+  height: 250px;
+  min-height: 250px;
+}
+body[data-themepack="vkify"] .notification_ballon wrap content a {
+  color: #B1DAFF;
+  font-weight: bold;
+}
+body[data-themepack="vkify"] .im_reply .post {
+  background-color: #edf0f5;
+  padding: 4px 5px;
+  border: 1px solid #dbdce0;
+}
+body[data-themepack="vkify"] .im_reply_arrow::before {
+  content: "";
+  position: relative;
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #edf0f5;
+  top: 11px;
+  left: 18px;
+  z-index: 2;
+}
+body[data-themepack="vkify"] .im_reply_arrow::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #dbdce0;
+  left: 18px;
+  z-index: 1;
+}
+body[data-themepack="vkify"] .im_pad_scroll {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  margin: 0 -9px;
+  padding: 0 9px;
+  max-height: 500px;
+}
+.headBack {
+  position: absolute;
+  left: 145px;
+  text-transform: none;
+}
+}
