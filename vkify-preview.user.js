@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VKify 03.05.25 Preview
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  vkify update preview
 // @author       koke228
 // @match        *://ovk.to/*
@@ -194,7 +194,7 @@ window.router.route = async function(params = {}) {
             window.cur.prev_url = window.cur.url;
             this.__appendPage(parsed_content)
             await this.__integratePage()
-            if (isUserSection(document.location.pathname) && !window.cur.ignoreheadlink) {
+            if (isUserSection(document.location.pathname) && !window.cur.ignoreheadlink && window.cur.first_name && window.cur.url) {
               document.querySelector('.headBack').style = "display: block";
               document.querySelector('#search_box').style = "display: none";
               document.querySelector('.headBack a').innerText = escapeHtml(`${window.cur.first_name} ${window.cur.last_name}`);
